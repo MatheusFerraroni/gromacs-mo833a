@@ -1,5 +1,9 @@
 ## Informações básicas
 
+- versão Gromacs: 2020.2-dev-20200320-7267a4f-unknown
+- cmake: 3.17.0
+- GNU Make: 4.1
+- gcc: 5.4.0 20160609
 
 ### SO Hospedeiro
 - Sistema hospedeiro: Windows 10 PRO 64 bits versão 1903 (sem modificações)
