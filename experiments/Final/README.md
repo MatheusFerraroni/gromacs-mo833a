@@ -6,6 +6,7 @@
 - gcc: 5.4.0 20160609
 
 ### SO Hospedeiro
+
 - Sistema hospedeiro: Windows 10 PRO 64 bits versão 1903 (sem modificações)
 - Memória RAM: 16gb 2400 Mhz
 - Tipo de memória: SSD
@@ -27,6 +28,7 @@ Vale ressaltar que a quantidade de núcleos do processador foi alternada entre 1
 
 - perf 4.15.18
 - valgrind 3.11.0
+- Intel Vtune Profiler 2020 Update 1
 
 ## Arquivos gerados
 
@@ -49,6 +51,7 @@ Vale ressaltar que a quantidade de núcleos do processador foi alternada entre 1
 - **result_report_2**: Resultado do "perf report" perf2.data
 - **result_report_3**: Resultado do "perf report" perf3.data
 - **result_report_4**: Resultado do "perf report" perf4.data
+- **vtune/**: Arquivos gerados pela avaliação com vtune
 
 ## Resultados
 
@@ -100,4 +103,14 @@ Resultado obtido com o valgrind para o comando ```valgrind --tool=callgrind``` c
 </p>
 <p align="center">
 	<img src="./imgs/valgrind_call_graph_do_force_4_thread.png" alt="nd" width="732">
+</p>
+
+
+## Resultado VTUNE
+
+O Vtune foi utilizado para avaliar o gromacs compilado no modo debug com as flags "-DGMX_THREAD_MPI=OFF", "-DFMX_MPI=OFF", "-DGMX_OPENMP=OFF" e "-DGMX_GPU=OFF".
+
+
+<p align="center">
+	<img src="./imgs/vtune.png" alt="nd" width="732">
 </p>
