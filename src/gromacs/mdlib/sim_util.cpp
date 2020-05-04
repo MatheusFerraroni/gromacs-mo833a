@@ -113,6 +113,8 @@
 #include "gromacs/utility/smalloc.h"
 #include "gromacs/utility/strconvert.h"
 #include "gromacs/utility/sysinfo.h"
+#include <stdio.h>
+#include <sys/time.h>
 
 using gmx::AtomLocality;
 using gmx::DomainLifetimeWorkload;
@@ -126,6 +128,14 @@ using gmx::StepWorkload;
 // a blocking wait (so polling does not introduce overhead when the static
 // PME-first ordering would suffice).
 static const bool c_disableAlternatingWait = (getenv("GMX_DISABLE_ALTERNATING_GPU_WAIT") != nullptr);
+
+double mysecond(){
+    struct timeval tp;
+    struct timezone tzp;
+    gettimeofday(&tp, &tzp);
+    return ((double) tp.tv_sec+ (double) tp.tv_usec*1.e-6);
+}
+
 
 static void sum_forces(rvec f[], gmx::ArrayRef<const gmx::RVec> forceToAdd)
 {
@@ -891,6 +901,8 @@ static void launchGpuEndOfStepTasks(nonbonded_verlet_t*               nbv,
     }
 }
 
+extern double GLOB_TIME_START;
+extern int GLOB_ITERATION_COUNTER;
 
 void do_force(FILE*                               fplog,
               const t_commrec*                    cr,
@@ -923,6 +935,14 @@ void do_force(FILE*                               fplog,
               int                                 legacyFlags,
               const DDBalanceRegionHandler&       ddBalanceRegionHandler)
 {
+    GLOB_ITERATION_COUNTER += 1;
+    double t1, t2, elapsed;
+    t1 = mysecond();
+
+    if (GLOB_ITERATION_COUNTER==1){
+        printf("Init time, %f\n", (t1-GLOB_TIME_START ) );
+    }
+
     int                          i, j;
     double                       mu[2 * DIM];
     nonbonded_verlet_t*          nbv      = fr->nbv.get();
@@ -1862,4 +1882,8 @@ void do_force(FILE*                               fplog,
      * the balance timing, which is ok as most tasks do communication.
      */
     ddBalanceRegionHandler.openBeforeForceComputationCpu(DdAllowBalanceRegionReopen::no);
+
+    t2 = mysecond();
+    elapsed = t2-t1;
+    printf("Iteration: %d, %f, %f\n",GLOB_ITERATION_COUNTER, elapsed, (t2-GLOB_TIME_START) );
 }

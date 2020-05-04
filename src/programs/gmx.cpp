@@ -47,8 +47,27 @@
 
 #include "legacymodules.h"
 
+#include <sys/time.h>
+#include <stdio.h>
+
+
+double GLOB_TIME_START = 0;
+int GLOB_ITERATION_COUNTER = 0;
+
+double mysecond(){
+    struct timeval tp;
+    struct timezone tzp;
+    gettimeofday(&tp, &tzp);
+    return ((double) tp.tv_sec+ (double) tp.tv_usec*1.e-6);
+}
+
 int main(int argc, char* argv[])
 {
+
+    double t1, t2, elapsed;
+    t1 = mysecond();
+    GLOB_TIME_START = mysecond();
+
     gmx::CommandLineProgramContext& context = gmx::initForCommandLine(&argc, &argv);
     try
     {
@@ -58,6 +77,11 @@ int main(int argc, char* argv[])
         manager.addHelpTopic(gmx::createSelectionHelpTopic());
         int rc = manager.run(argc, argv);
         gmx::finalizeForCommandLine();
+
+        t2 = mysecond();
+        elapsed = t2-t1;
+        printf("[MO833] TOTAL_MAIN_TIME: %f\n", elapsed);
+
         return rc;
     }
     catch (const std::exception& ex)
