@@ -1,5 +1,12 @@
 ## Informações básicas
 
+- Aluno: Matheus Ferraroni Sanches
+- RA: 212142
+- Data: 04/05/2020
+- Objetivo: Avaliar o tempo das paramount iteration da aplicação Gromacs.
+
+## Gromacs e compiladores
+
 - versão Gromacs: 2020.2-dev-20200320-7267a4f-unknown
 - cmake: 3.17.0
 - GNU Make: 4.1
@@ -37,8 +44,9 @@ A imagem abaixo mostra o tempo de execução de cada paramount iteration durante
 
 Informações extras sobre as execuções são apresentadas na tabela abaixo
 
-| Tempo total            | 48,476429 |
+| Parâmetro              | Valor     |
 |------------------------|-----------|
+| Tempo total            | 48,476429 |
 | Tempo de inicialização | 0,050705  |
 | Paramount Mínimo       | 0,061548  |
 | Paramount Mediana      | 0,065796  |
