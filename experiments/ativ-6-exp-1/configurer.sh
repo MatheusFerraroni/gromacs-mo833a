@@ -33,4 +33,4 @@ $gro grompp -f ./ions.mdp -c 6LVN_solv_ions.gro -p topol.top -o em.tpr
 
 
 
-$gro mdrun -v -deffnm em > result.txt
+$gro mdrun -v -deffnm em > result2.txt

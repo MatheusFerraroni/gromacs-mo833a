@@ -38,7 +38,7 @@ Esses resultados também podem ser vistos na planilha: <a href="https://docs.goo
 
 A imagem abaixo mostra o tempo de execução de cada paramount iteration durante a execução de todo o programa.
 <p align="center">
-	<img src="./result.png" alt="nd" width="600">
+	<img src="./result2.png" alt="nd" width="600">
 </p>
 
 
@@ -46,10 +46,12 @@ Informações extras sobre as execuções são apresentadas na tabela abaixo
 
 | Parâmetro              | Valor     |
 |------------------------|-----------|
-| Tempo total            | 48,476429 |
-| Tempo de inicialização | 0,050705  |
-| Paramount Mínimo       | 0,061548  |
-| Paramount Mediana      | 0,065796  |
-| Paramount Média        | 0,068288  |
-| Paramount Máxima       | 0,150625  |
-| Desvio padrão          | 0,009187  |
+| Tempo total            | 20.545232 |
+| Tempo de inicialização | 0,032323  |
+| Paramount Mínimo       | 0,016955  |
+| Paramount Mediana      | 0,022376  |
+| Paramount Média        | 0,023262  |
+| Paramount Máxima       | 0,142841  |
+| Desvio padrão          | 0,006613  |
+| Total Time Paramount   | 20,423892 |
+| Total % Paramount      | 0,994094  |
