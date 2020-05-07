@@ -26,7 +26,7 @@
 - Sistema emulado: Ubuntu 16.04.6 LTS 64 bits (sem modificações)
 - Memória RAM: 6gb 2400 Mhz
 - Tipo de memória: SSD
-- Proecssador: I5-9600k 1 núcleo
+- Proecssador: I5-9600k 4 núcleo
 
 
 
