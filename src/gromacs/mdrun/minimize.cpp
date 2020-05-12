@@ -106,6 +106,11 @@
 
 #include "legacysimulator.h"
 #include "shellfc.h"
+#include <stdio.h>
+#include <sys/time.h>
+extern double GLOB_TIME_START;
+extern int GLOB_ITERATION_COUNTER;
+extern int GLOB_ITERATION_LIMIT;
 
 using gmx::MdrunScheduleWorkload;
 
@@ -125,6 +130,13 @@ typedef struct
     //! Direction
     int a_fmax;
 } em_state_t;
+
+double mysecond(){
+    struct timeval tp;
+    struct timezone tzp;
+    gettimeofday(&tp, &tzp);
+    return ((double) tp.tv_sec+ (double) tp.tv_usec*1.e-6);
+}
 
 //! Print the EM starting conditions
 static void print_em_start(FILE*                     fplog,
@@ -2424,6 +2436,15 @@ void LegacySimulator::do_steep()
     bAbort = FALSE;
     while (!bDone && !bAbort)
     {
+
+        GLOB_ITERATION_COUNTER += 1;
+        double t1, t2, elapsed;
+        t1 = mysecond();
+
+        if (GLOB_ITERATION_COUNTER==1){
+            printf("Init time, %f\n", (t1-GLOB_TIME_START ) );
+        }
+
         bAbort = (nsteps >= 0) && (count == nsteps);
 
         /* set new coordinates, except for first step */
@@ -2555,6 +2576,13 @@ void LegacySimulator::do_steep()
         }
 
         count++;
+
+        t2 = mysecond();
+        elapsed = t2-t1;
+        printf("Iteration: %d, %f, %f\n",GLOB_ITERATION_COUNTER, elapsed, (t2-GLOB_TIME_START) );
+
+
+        bAbort = (GLOB_ITERATION_COUNTER >= GLOB_ITERATION_LIMIT);
     } /* End of the loop  */
 
     /* Print some data...  */
