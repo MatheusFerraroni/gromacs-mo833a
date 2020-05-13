@@ -1,7 +1,7 @@
 
 
-apt-get update
-apt-get install -y wget make gcc libgfortran3 \
+sudo apt-get update
+sudo apt-get install -y wget make gcc libgfortran3 \
 sysstat libibnetdisc-dev openmpi-bin libopenmpi-dev \
 libhdf5-openmpi-dev gfortran build-essential git
 
@@ -20,4 +20,4 @@ cd build
 
 
 cmake .. -DGMX_BUILD_OWN_FFTW=ON -DCMAKE_C_COMPILER=mpicc -DCMAKE_CXX_COMPILER=mpicxx -DGMX_MPI=on 1> cmake.out 2> cmake.outerr
-make 1> make_res.out 2> make_res.outerr
+make -i 1> make_res.out 2> make_res.outerr
