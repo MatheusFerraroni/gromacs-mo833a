@@ -1,7 +1,7 @@
 
 
-sudo apt-get update
-sudo apt-get install -y wget make gcc libgfortran3 \
+apt-get update
+apt-get install -y wget make gcc libgfortran3 \
 sysstat libibnetdisc-dev openmpi-bin libopenmpi-dev \
 libhdf5-openmpi-dev gfortran build-essential git
 
@@ -9,7 +9,7 @@ libhdf5-openmpi-dev gfortran build-essential git
 wget https://github.com/Kitware/CMake/releases/download/v3.17.2/cmake-3.17.2-Linux-x86_64.sh
 chmod +x cmake-3.17.2-Linux-x86_64.sh
 bash cmake-3.17.2-Linux-x86_64.sh --skip-license
-sudo ln -s /home/ubuntu/cmake-3.17.2-Linux-x86_64/bin/* /usr/local/bin
+ln -s /home/ubuntu/cmake-3.17.2-Linux-x86_64/bin/* /usr/local/bin
 
 
 git clone --single-branch --branch ativi-7-exp-1 https://github.com/MatheusFerraroni/gromacs-mo833a.git
