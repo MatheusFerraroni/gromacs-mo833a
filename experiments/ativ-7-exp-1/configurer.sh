@@ -32,4 +32,4 @@ echo "#"
 echo "#"
 
 
-$gro mdrun -v -deffnm em 1> gmx.out 2> gmx.err
+# $gro mdrun -v -deffnm em 1> gmx.out 2> gmx.err

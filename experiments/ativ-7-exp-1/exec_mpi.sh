@@ -47,7 +47,8 @@ if [ "$8" != "" ]; then
 fi
 
 
-res="mpirun -np $total --host ""$res"" $gro mdrun -v -deffnm em 1> gmx.out 2> gmx.err"
+# res="mpirun -np $total --host ""$res"" $gro mdrun -v -deffnm em 1> gmx.out 2> gmx.err"
+res="mpirun -np $total --host ""$res"" $gro mdrun -v -deffnm em"
 
 echo "Executando:"
 echo $res
