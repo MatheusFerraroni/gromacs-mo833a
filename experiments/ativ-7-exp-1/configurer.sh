@@ -14,7 +14,7 @@ echo "Configurando gmx"
 echo "#"
 echo "#"
 
-gro='../../../build/bin/gmx'
+gro='../../../build/bin/gmx_mpi'
 
 echo '15' | $gro pdb2gmx -f ./6LVN.pdb -o 6LVN_processed.gro -water spce
 $gro editconf -f 6LVN_processed.gro -o 6LVN_newbox.gro -c -d 1.0 -bt cubic
