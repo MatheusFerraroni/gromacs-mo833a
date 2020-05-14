@@ -42,7 +42,8 @@ make -i 1> make_res.out 2> make_res.outerr
 
 echo "make pronto" >> log_geral.txt
 
-
+cd ~/
+sudo chmod -R 777 gromacs-mo833a/
 
 
 echo "all complete" >> log_geral.txt

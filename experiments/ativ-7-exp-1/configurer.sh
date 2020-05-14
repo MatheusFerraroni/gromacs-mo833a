@@ -10,6 +10,9 @@ cp ./ions.mdp ./conf/ions.mdp
 
 cd conf
 
+touch gmx.out
+touch gmx.err
+
 echo "Configurando gmx"
 echo "#"
 echo "#"
