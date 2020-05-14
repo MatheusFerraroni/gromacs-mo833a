@@ -1,10 +1,15 @@
 
+echo "iniciando" > log_geral.txt
 
 sudo apt-get update
+
+echo "update ok" >> log_geral.txt
+
 sudo apt-get install -y wget make gcc libgfortran3 \
 sysstat libibnetdisc-dev openmpi-bin libopenmpi-dev \
 libhdf5-openmpi-dev gfortran build-essential git
 
+echo "apt-get install ok" >> log_geral.txt
 
 # wget https://github.com/Kitware/CMake/releases/download/v3.17.2/cmake-3.17.2-Linux-x86_64.sh
 # chmod +x cmake-3.17.2-Linux-x86_64.sh
@@ -23,4 +28,10 @@ libhdf5-openmpi-dev gfortran build-essential git
 
 
 
-ssh-keygen -q -b 2048 -t rsa -N '' -C 'creating SSH' -f ~/.ssh/id_rsa
+
+echo "gerando ssh" >> log_geral.txt
+
+sudo ssh-keygen -q -b 2048 -t rsa -N '' -C 'creating SSH' -f ~/.ssh/id_rsa
+
+
+echo "all complete" >> log_geral.txt
