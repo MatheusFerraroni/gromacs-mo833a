@@ -23,4 +23,4 @@ sudo ln -s /home/ubuntu/bin/* /usr/local/bin
 
 
 
-ssh-keygen -q -b 2048 -t rsa -N '' -C 'creating SSH' -f ~/.ssh/id_rsa creates='~/.ssh/id_rsa'
+ssh-keygen -q -b 2048 -t rsa -N '' -C 'creating SSH' -f ~/.ssh/id_rsa
