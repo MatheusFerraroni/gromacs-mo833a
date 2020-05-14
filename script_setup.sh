@@ -1,9 +1,9 @@
 
 
-# sudo apt-get update
-# sudo apt-get install -y wget make gcc libgfortran3 \
-# sysstat libibnetdisc-dev openmpi-bin libopenmpi-dev \
-# libhdf5-openmpi-dev gfortran build-essential git
+sudo apt-get update
+sudo apt-get install -y wget make gcc libgfortran3 \
+sysstat libibnetdisc-dev openmpi-bin libopenmpi-dev \
+libhdf5-openmpi-dev gfortran build-essential git
 
 
 # wget https://github.com/Kitware/CMake/releases/download/v3.17.2/cmake-3.17.2-Linux-x86_64.sh
@@ -23,4 +23,4 @@
 
 
 
-# ssh-keygen -q -b 2048 -t rsa -N '' -C 'creating SSH' -f ~/.ssh/id_rsa
+ssh-keygen -q -b 2048 -t rsa -N '' -C 'creating SSH' -f ~/.ssh/id_rsa
