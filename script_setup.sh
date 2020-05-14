@@ -29,9 +29,9 @@ echo "apt-get install ok" >> log_geral.txt
 
 
 
-echo "gerando ssh" >> log_geral.txt
+# echo "gerando ssh" >> log_geral.txt
 
-sudo ssh-keygen -q -b 2048 -t rsa -N '' -C 'creating SSH' -f ~/.ssh/id_rsa
+# sudo ssh-keygen -q -b 2048 -t rsa -N '' -C 'creating SSH' -f ~/.ssh/id_rsa
 
 
-echo "all complete" >> log_geral.txt
+# echo "all complete" >> log_geral.txt
