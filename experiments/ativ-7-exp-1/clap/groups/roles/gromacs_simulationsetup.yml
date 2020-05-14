@@ -1,0 +1,7 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+  - name: Entrando na pasta do gromacs e executando configurer.sh
+    become: no
+    shell: "cd gromacs-mo833a/experiments/ativ-7-exp-1/ && sh configurer.sh"

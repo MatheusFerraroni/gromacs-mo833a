@@ -1,0 +1,20 @@
+---
+actions:
+  setup:
+    playbook: roles/gromacs_setup.yml
+    description: Configura a maquina virtual com as bibliotecas e instala o GROMACS
+
+
+  simulation-setup:
+    playbook: roles/gromacs_simulationsetup.yml
+    description: Gera arquivos para simulacao
+
+  
+  fetch-result:
+    playbook: roles/gromacs_fetch.yml
+    description: Pega os resultados gerados
+
+    
+  run:
+    playbook: roles/gromacs_run.yml
+    description: Run gromacs

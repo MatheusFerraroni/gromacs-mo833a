@@ -1,0 +1,7 @@
+login-ubuntu:
+    user: ubuntu
+    keypair_name: clap_key
+    keypair_public_file: clap_key.pub
+    keypair_private_file: clap_key.pem
+    # sudo: true
+    # sudo_user: root

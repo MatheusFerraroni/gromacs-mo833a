@@ -1,0 +1,18 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+  - name: PEGANDO RESULTADOS .out
+    become: no
+    synchronize:
+      src: ~/gromacs-mo833a/experiments/ativ-7-exp-1/conf/gmx.out
+      dest: /home/matheus/Desktop/mo833/ativ7/teste_result/{{inventory_hostname}}_gmx.out
+      mode: pull
+      recursive: yes
+  - name: PEGANDO RESULTADOS .err
+    become: no
+    synchronize:
+      src: ~/gromacs-mo833a/experiments/ativ-7-exp-1/conf/gmx.err
+      dest: /home/matheus/Desktop/mo833/ativ7/teste_result/{{inventory_hostname}}_gmx.err
+      mode: pull
+      recursive: yes

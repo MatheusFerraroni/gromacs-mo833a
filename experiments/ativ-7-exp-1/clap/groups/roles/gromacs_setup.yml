@@ -1,0 +1,45 @@
+---
+- hosts: all
+  tasks:
+  - name: Preparando maquina para rodar o gromacs_mpi
+    become: yes
+    shell: "wget https://raw.githubusercontent.com/MatheusFerraroni/gromacs-mo833a/ativi-7-exp-1/experiments/ativ-7-exp-1/script_setup.sh && sh script_setup.sh"
+  - name: Pegando script setup2
+    become: yes
+    shell: "chmod -R 777 gromacs-mo833a/"
+  - name: Remove hosts file
+    file:
+      path: /home/ubuntu/hosts
+      state: absent
+  - name: Create hosts file
+    file:
+      path: /home/ubuntu/hosts
+      state: touch
+  - name: Add Ansible inventory mappings to /home/ubuntu/hosts
+    blockinfile:
+      marker: ""
+      path: /home/ubuntu/hosts
+      block: |
+        {% for host in groups['all'] %}
+        {{ hostvars[host].ansible_host }} slots=1
+        {% endfor %}
+  - name: Gera ssh
+    shell: "ssh-keygen -q -b 2048 -t rsa -N '' -C 'creating SSH' -f ~/.ssh/id_rsa"
+  - name: Pegar arquivo ssh do host
+    become: no
+    synchronize:
+      src: ~/.ssh/id_rsa.pub
+      dest: /home/matheus/Desktop/mo833/ativ7/teste/{{inventory_hostname}}-id_rsa.pub
+      mode: pull
+      recursive: yes
+  - name: faz pasta pros sshs
+    shell: "mkdir sshs_amigas"
+  - name: Fazendo upload ssh keys
+    become: no
+    synchronize:
+      src: /home/matheus/Desktop/mo833/ativ7/teste/
+      dest: ~/sshs_amigas/
+      recursive: yes
+  - name: Pegando script setup2
+    become: no
+    shell: "cd ~/sshs_amigas/ && wget https://raw.githubusercontent.com/MatheusFerraroni/gromacs-mo833a/ativi-7-exp-1/experiments/ativ-7-exp-1/script_setup2.sh && sh script_setup2.sh"
