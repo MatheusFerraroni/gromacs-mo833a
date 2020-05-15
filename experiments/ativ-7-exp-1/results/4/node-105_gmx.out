@@ -1,0 +1,58 @@
+--------------------------------------------------------------------------
+[[30854,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: ip-172-31-59-78
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Init time, 0.826893
+Init time, 0.828646
+Init time, 0.828800
+Init time, 0.828828
+Iteration: 1, 0.036991, 0.865819
+Iteration: 1, 0.037438, 0.866238
+Iteration: 1, 0.037828, 0.866474
+Iteration: 1, 0.038815, 0.865708
+Iteration: 2, 0.034916, 0.900964
+Iteration: 2, 0.034934, 0.900787
+Iteration: 2, 0.035256, 0.901560
+Iteration: 2, 0.035153, 0.901731
+Iteration: 3, 0.034476, 0.935642
+Iteration: 3, 0.034602, 0.935532
+Iteration: 3, 0.034689, 0.936316
+Iteration: 3, 0.034683, 0.936522
+Iteration: 4, 0.034409, 0.970257
+Iteration: 4, 0.034464, 0.970138
+Iteration: 4, 0.034512, 0.970897
+Iteration: 4, 0.034520, 0.971154
+Iteration: 5, 0.034683, 1.005115
+Iteration: 5, 0.034524, 1.005484
+Iteration: 5, 0.034694, 1.004975
+Iteration: 5, 0.034484, 1.005744
+Iteration: 6, 0.033843, 1.039193
+Iteration: 6, 0.034156, 1.039701
+Iteration: 6, 0.033923, 1.039027
+Iteration: 6, 0.034123, 1.039971
+Iteration: 7, 0.033966, 1.073347
+Iteration: 7, 0.034231, 1.073993
+Iteration: 7, 0.034086, 1.073256
+Iteration: 7, 0.034136, 1.074204
+Iteration: 8, 0.034724, 1.108273
+Iteration: 8, 0.034730, 1.108804
+Iteration: 8, 0.034670, 1.108059
+Iteration: 8, 0.034738, 1.109034
+Iteration: 9, 0.034650, 1.143085
+Iteration: 9, 0.034792, 1.142981
+Iteration: 9, 0.034721, 1.143588
+Iteration: 9, 0.034692, 1.143821
+Iteration: 10, 0.034202, 1.177465
+Iteration: 10, 0.034215, 1.177325
+Iteration: 10, 0.034429, 1.178079
+Iteration: 10, 0.034297, 1.178217
+[MO833] TOTAL_MAIN_TIME: 1.246985
+[MO833] TOTAL_MAIN_TIME: 1.247322
+[MO833] TOTAL_MAIN_TIME: 1.247716
+[MO833] TOTAL_MAIN_TIME: 1.247160

@@ -1,0 +1,74 @@
+        :-) GROMACS - gmx mdrun, 2020.2-dev-20200515-ebbf4f4-unknown (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar      Christian Blau   Viacheslav Bolnykh     Kevin Boyd    
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra       Alan Gray     
+  Gerrit Groenhof     Anca Hamuraru    Vincent Hindriksen  M. Eric Irrgang  
+  Aleksei Iupinov   Christoph Junghans     Joe Jordan     Dimitrios Karkoulis
+    Peter Kasson        Jiri Kraus      Carsten Kutzner      Per Larsson    
+  Justin A. Lemkul    Viveca Lindahl    Magnus Lundborg     Erik Marklund   
+    Pascal Merz     Pieter Meulenhoff    Teemu Murtola       Szilard Pall   
+    Sander Pronk      Roland Schulz      Michael Shirts    Alexey Shvetsov  
+   Alfons Sijbers     Peter Tieleman      Jon Vincent      Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf      Artem Zhmurov   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2019, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx mdrun, version 2020.2-dev-20200515-ebbf4f4-unknown
+Executable:   /home/ubuntu/gromacs-mo833a/experiments/ativ-7-exp-1/conf/../../../build/bin/gmx_mpi
+Data prefix:  /home/ubuntu/gromacs-mo833a (source tree)
+Working dir:  /home/ubuntu/gromacs-mo833a/experiments/ativ-7-exp-1/conf
+Command line:
+  gmx_mpi mdrun -v -deffnm em
+
+
+Back Off! I just backed up em.log to ./#em.log.1#
+Reading file em.tpr, VERSION 2020.2-dev-20200515-ebbf4f4-unknown (single precision)
+Using 4 MPI processes
+Using 1 OpenMP thread per MPI process
+
+
+Back Off! I just backed up em.trr to ./#em.trr.1#
+
+Back Off! I just backed up em.edr to ./#em.edr.1#
+
+Steepest Descents:
+   Tolerance (Fmax)   =  1.00000e+03
+   Number of steps    =        50000
+Step=    0, Dmax= 1.0e-02 nm, Epot= -3.98128e+05 Fmax= 2.20591e+05, atom= 28034
+Step=    1, Dmax= 1.0e-02 nm, Epot= -4.72912e+05 Fmax= 8.29121e+04, atom= 2201
+Step=    2, Dmax= 1.2e-02 nm, Epot= -5.58836e+05 Fmax= 3.06097e+04, atom= 31232
+Step=    3, Dmax= 1.4e-02 nm, Epot= -6.30263e+05 Fmax= 1.12295e+04, atom= 31232
+Step=    4, Dmax= 1.7e-02 nm, Epot= -6.81805e+05 Fmax= 6.80698e+03, atom= 2151
+Step=    5, Dmax= 2.1e-02 nm, Epot= -7.13014e+05 Fmax= 9.98003e+03, atom= 2147
+Step=    6, Dmax= 2.5e-02 nm, Epot= -7.26100e+05 Fmax= 2.95813e+04, atom= 2147
+Step=    7, Dmax= 3.0e-02 nm, Epot= -7.33408e+05 Fmax= 1.62694e+04, atom= 2147
+Step=    8, Dmax= 3.6e-02 nm, Epot= -7.41235e+05 Fmax= 3.96035e+04, atom= 2147
+Step=    9, Dmax= 4.3e-02 nm, Epot= -7.47210e+05 Fmax= 2.58165e+04, atom= 2147
+
+writing lowest energy coordinates.
+
+Back Off! I just backed up em.gro to ./#em.gro.1#
+
+Steepest Descents converged to machine precision in 10 steps,
+but did not reach the requested Fmax < 1000.
+Potential Energy  = -7.4720988e+05
+Maximum force     =  2.5816535e+04 on atom 2147
+Norm of force     =  3.6872007e+02
+
+GROMACS reminds you: "I believe in miracles cause I'm one" (The Ramones)
+
+[ip-172-31-48-175:30798] 3 more processes have sent help message help-mpi-btl-base.txt / btl:no-nics
+[ip-172-31-48-175:30798] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages

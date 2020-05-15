@@ -1,0 +1,106 @@
+--------------------------------------------------------------------------
+[[17329,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: ip-172-31-59-120
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Init time, 1.099481
+Init time, 1.099131
+Init time, 1.101068
+Init time, 1.100885
+Init time, 1.101118
+Init time, 1.102191
+Init time, 1.103185
+Init time, 1.102670
+Iteration: 1, 0.026370, 1.127438
+Iteration: 1, 0.024234, 1.127419
+Iteration: 1, 0.024205, 1.126875
+Iteration: 1, 0.026097, 1.126982
+Iteration: 1, 0.028195, 1.127676
+Iteration: 1, 0.025655, 1.127846
+Iteration: 1, 0.026267, 1.127385
+Iteration: 1, 0.027806, 1.126937
+Iteration: 2, 0.022833, 1.150372
+Iteration: 2, 0.022600, 1.150140
+Iteration: 2, 0.022615, 1.149610
+Iteration: 2, 0.022569, 1.150336
+Iteration: 2, 0.022647, 1.150563
+Iteration: 2, 0.022759, 1.149853
+Iteration: 2, 0.022590, 1.149604
+Iteration: 2, 0.022616, 1.150117
+Iteration: 3, 0.021971, 1.172447
+Iteration: 3, 0.021810, 1.171534
+Iteration: 3, 0.021981, 1.172223
+Iteration: 3, 0.021771, 1.172422
+Iteration: 3, 0.021940, 1.172376
+Iteration: 3, 0.021961, 1.171933
+Iteration: 3, 0.021778, 1.171468
+Iteration: 3, 0.021709, 1.171955
+Iteration: 4, 0.022235, 1.194727
+Iteration: 4, 0.022975, 1.195509
+Iteration: 4, 0.022573, 1.195062
+Iteration: 4, 0.022866, 1.195189
+Iteration: 4, 0.022659, 1.194295
+Iteration: 4, 0.022270, 1.194333
+Iteration: 4, 0.022814, 1.194375
+Iteration: 4, 0.022640, 1.194672
+Iteration: 5, 0.021802, 1.217413
+Iteration: 5, 0.022486, 1.217277
+Iteration: 5, 0.022007, 1.217313
+Iteration: 5, 0.022275, 1.217441
+Iteration: 5, 0.022311, 1.216696
+Iteration: 5, 0.022337, 1.216772
+Iteration: 5, 0.022043, 1.216824
+Iteration: 5, 0.022422, 1.216903
+Iteration: 6, 0.021938, 1.239288
+Iteration: 6, 0.022024, 1.239442
+Iteration: 6, 0.021961, 1.239484
+Iteration: 6, 0.022013, 1.239510
+Iteration: 6, 0.022091, 1.238888
+Iteration: 6, 0.022015, 1.238923
+Iteration: 6, 0.022042, 1.238914
+Iteration: 6, 0.021698, 1.238914
+Iteration: 7, 0.022080, 1.261685
+Iteration: 7, 0.022351, 1.261699
+Iteration: 7, 0.022237, 1.261795
+Iteration: 7, 0.022176, 1.261725
+Iteration: 7, 0.022231, 1.261208
+Iteration: 7, 0.022133, 1.261169
+Iteration: 7, 0.022315, 1.261302
+Iteration: 7, 0.022175, 1.261301
+Iteration: 8, 0.021371, 1.282673
+Iteration: 8, 0.021847, 1.283607
+Iteration: 8, 0.021707, 1.283601
+Iteration: 8, 0.022023, 1.283804
+Iteration: 8, 0.021583, 1.282980
+Iteration: 8, 0.021217, 1.282604
+Iteration: 8, 0.021910, 1.283742
+Iteration: 8, 0.021796, 1.283041
+Iteration: 9, 0.021776, 1.305680
+Iteration: 9, 0.021785, 1.305505
+Iteration: 9, 0.021770, 1.305631
+Iteration: 9, 0.022104, 1.305787
+Iteration: 9, 0.021917, 1.305041
+Iteration: 9, 0.022493, 1.305271
+Iteration: 9, 0.022567, 1.305642
+Iteration: 9, 0.022601, 1.305294
+Iteration: 10, 0.022817, 1.328602
+Iteration: 10, 0.022719, 1.328332
+Iteration: 10, 0.022469, 1.328204
+Iteration: 10, 0.022383, 1.328236
+Iteration: 10, 0.022135, 1.327484
+Iteration: 10, 0.022769, 1.327880
+Iteration: 10, 0.021921, 1.327375
+Iteration: 10, 0.022274, 1.328000
+[MO833] TOTAL_MAIN_TIME: 1.399132
+[MO833] TOTAL_MAIN_TIME: 1.399120
+[MO833] TOTAL_MAIN_TIME: 1.399131
+[MO833] TOTAL_MAIN_TIME: 1.398923
+[MO833] TOTAL_MAIN_TIME: 1.398879
+[MO833] TOTAL_MAIN_TIME: 1.399229
+[MO833] TOTAL_MAIN_TIME: 1.398766
+[MO833] TOTAL_MAIN_TIME: 1.398941
