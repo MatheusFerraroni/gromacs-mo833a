@@ -25,22 +25,22 @@ sudo ln -s /home/ubuntu/bin/* /usr/local/bin
 echo "criou link cmake" >> ~/log_geral.txt
 
 
-# git clone --single-branch --branch ativi-7-exp-1 https://github.com/MatheusFerraroni/gromacs-mo833a.git
-# echo "gromacs clonado" >> ~/log_geral.txt
-# cd gromacs-mo833a/
+git clone --single-branch --branch ativi-7-exp-1 https://github.com/MatheusFerraroni/gromacs-mo833a.git
+echo "gromacs clonado" >> ~/log_geral.txt
+cd gromacs-mo833a/
 
-# mkdir build
-# cd build
-# echo "na pasta do gromacs e pasta build criada" >> ~/log_geral.txt
+mkdir build
+cd build
+echo "na pasta do gromacs e pasta build criada" >> ~/log_geral.txt
 
-# echo "vai executar o cmake" >> ~/log_geral.txt
-# cmake .. -DGMX_BUILD_OWN_FFTW=ON -DCMAKE_C_COMPILER=mpicc -DCMAKE_CXX_COMPILER=mpicxx -DGMX_MPI=on 1> cmake.out 2> cmake.outerr
+echo "vai executar o cmake" >> ~/log_geral.txt
+cmake .. -DGMX_BUILD_OWN_FFTW=ON -DCMAKE_C_COMPILER=mpicc -DCMAKE_CXX_COMPILER=mpicxx -DGMX_MPI=on 1> cmake.out 2> cmake.outerr
 
-# echo "cmake executado e vai chamar o make" >> ~/log_geral.txt
+echo "cmake executado e vai chamar o make" >> ~/log_geral.txt
 
-# make -i 1> make_res.out 2> make_res.outerr
+make -i 1> make_res.out 2> make_res.outerr
 
-# echo "make pronto" >> ~/log_geral.txt
+echo "make pronto" >> ~/log_geral.txt
 
 
 

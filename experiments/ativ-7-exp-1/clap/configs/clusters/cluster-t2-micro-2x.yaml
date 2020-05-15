@@ -5,15 +5,15 @@ setups:
     actions:
     - type: command
       command: touch master.txt
-    - type: action
-      name: simulation-setup
-      group: gromacs
+    # - type: action
+    #   name: simulation-setup
+    #   group: gromacs
     # - type: action
     #   name: run
     #   group: gromacs
-    - type: action
-      name: fetch-result
-      group: gromacs
+    # - type: action
+    #   name: fetch-result
+    #   group: gromacs
 
   
   config-slave-1:
