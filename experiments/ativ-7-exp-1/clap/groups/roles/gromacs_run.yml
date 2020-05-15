@@ -2,38 +2,9 @@
 - hosts: all
   gather_facts: no
   tasks:
-  - name: Remove hosts file
-    file:
-      path: /home/ubuntu/hosts
-      state: absent
-  - name: Create hosts file
-    file:
-      path: /home/ubuntu/hosts
-      state: touch
-  - name: Add Ansible inventory mappings to /home/ubuntu/hosts
-    blockinfile:
-      marker: ""
-      path: /home/ubuntu/hosts
-      block: |
-        {% for host in groups['all'] %}
-        {{ hostvars[host].ansible_host }} slots=1
-        {% endfor %}
-  - name: Remove ips file
-    file:
-      path: ~/ips.sh
-      state: absent
-  - name: Create ips file
-    file:
-      path: ~/ips.sh
-      state: touch
-  - name: Add Ansible inventory mappings to ~/ips.sh
-    blockinfile:
-      marker: ""
-      path: ~/ips.sh
-      block: |
-        {% for host in groups['all'] %}
-        ssh-keyscan -H {{ hostvars[host].ansible_host }} >> ./.ssh/known_hosts
-        {% endfor %}
-  # - name: RUNNING SIM
+  # - name: Executing
   #   become: no
-  #   shell: "cd ~/gromacs-mo833a/experiments/ativ-7-exp-1/conf/ && mpirun -np {{ groups['all']|length }} --hostfile /home/ubuntu/hosts ../../../build/bin/gmx_mpi mdrun -v -deffnm em 1> gmx.out 2> gmx.err"
+  #   shell: "touch _a.txt"
+  - name: RUNNING SIM
+    become: no
+    shell: "cd ~/gromacs-mo833a/experiments/ativ-7-exp-1/conf/ && mpirun -np {{ groups['all']|length }} --hostfile /home/ubuntu/hosts ../../../build/bin/gmx_mpi mdrun -v -deffnm em 1> gmx.out 2> gmx.err"

@@ -36,12 +36,12 @@ setups:
 
       
 clusters:
-  cluster-t2-micro-2x:
+  cluster-t2-micro-4x:
     nodes:
       node-slave:
         type: type-a
-        count: 1
-        min_count: 1
+        count: 3
+        min_count: 3
         setups: 
         - config-slave-1
       node-master:
