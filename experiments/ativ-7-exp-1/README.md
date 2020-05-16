@@ -106,6 +106,54 @@ clusters:
 Os resultados obtidos podem ser vistos na planilha : <a href="https://docs.google.com/spreadsheets/d/1l1yDp_OvDGxEdpgnf0f4aUvdMhV4_63K8e7S9iVdPx8/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1l1yDp_OvDGxEdpgnf0f4aUvdMhV4_63K8e7S9iVdPx8/edit?usp=sharing</a>
 
 
+A tabela abaixo apresenta a estimativa para execução de 700 iterações, aproximadamente o total de execuções das paramount iteration.
+
+### Duas máquinas
+
+| Iteração | Tempo médio | Tempo total estimado |
+|----------|-------------|----------------------|
+| 1        | 0,066813    | 46,878154            |
+| 2        | 0,064615    | 45,340079            |
+| 3        | 0,063605    | 44,632787            |
+| 4        | 0,063137    | 44,305391            |
+| 5        | 0,062897    | 44,137584            |
+| 6        | 0,062690    | 43,992054            |
+| 7        | 0,062519    | 43,872804            |
+| 8        | 0,062393    | 43,784591            |
+| 9        | 0,062325    | 43,737215            |
+| 10       | 0,062265    | 43,694554            |
+
+### Quatro máquinas
+
+| Iteração | Tempo médio | Tempo total estimado |
+|----------|-------------|----------------------|
+| 1        | 0,037768    | 27,265892            |
+| 2        | 0,036416    | 26,319754            |
+| 3        | 0,035815    | 25,898850            |
+| 4        | 0,035480    | 25,664554            |
+| 5        | 0,035304    | 25,540777            |
+| 6        | 0,035088    | 25,390008            |
+| 7        | 0,034948    | 25,291667            |
+| 8        | 0,034919    | 25,271351            |
+| 9        | 0,034896    | 25,255414            |
+| 10       | 0,034835    | 25,212704            |
+
+### Oito máquinas
+
+| Iteração | Tempo médio | Tempo total estimado |
+|----------|-------------|----------------------|
+| 1        | 0,026104    | 19,373754            |
+| 2        | 0,024379    | 18,166254            |
+| 3        | 0,023541    | 17,579770            |
+| 4        | 0,023313    | 17,420207            |
+| 5        | 0,023092    | 17,265861            |
+| 6        | 0,022906    | 17,135241            |
+| 7        | 0,022807    | 17,065891            |
+| 8        | 0,022666    | 16,967460            |
+| 9        | 0,022606    | 16,925504            |
+| 10       | 0,022589    | 16,913586            |
+
+
 A figura abaixo apresenta o tempo de execução das primeiras 10 execuções da paramount iteration.
 <p align="center">
 	<img src="./result.png" alt="nd" width="600">
