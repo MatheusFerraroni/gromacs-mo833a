@@ -100,6 +100,8 @@ clusters:
 
 ## Execução com script
 
+Os arquivos executer_2x.sh, executer_4x.sh e executer_8x.sh foram preparados para executar todo o processo automaticamente.
+
 
 ## Resultados
 

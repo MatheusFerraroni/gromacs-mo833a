@@ -1,4 +1,4 @@
-clapp cluster start cluster-t2-micro-2x
+clapp cluster start cluster-t2-micro-4x
 
 clusterid=$(clapp cluster list | grep id | cut -d' ' -f2)
 
