@@ -1,10 +1,7 @@
 ---
-- hosts: all
+- hosts: master
   gather_facts: no
   tasks:
-  # - name: Executing
-  #   become: no
-  #   shell: "touch _a.txt"
   - name: RUNNING SIM
     become: no
     shell: "cd ~/gromacs-mo833a/experiments/ativ-7-exp-1/conf/ && mpirun -np {{ groups['all']|length }} --hostfile /home/ubuntu/hosts ../../../build/bin/gmx_mpi mdrun -v -deffnm em 1> gmx.out 2> gmx.err"

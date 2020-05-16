@@ -1,0 +1,1 @@
+clapp cluster start cluster-t2-micro-2x

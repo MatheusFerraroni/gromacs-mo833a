@@ -1,40 +1,30 @@
 setups:
   config-master-1:
     groups:
-    - name: gromacs
+    - name: gromacs/master
     actions:
     - type: command
       command: touch master.txt
-    # - type: action
-    #   name: configure-hosts
-    #   group: gromacs
 
-      
-    # - type: action
-    #   name: simulation-setup
-    #   group: gromacs
-    # - type: action
-    #   name: run
-    #   group: gromacs
-    # - type: action
-    #   name: fetch-result
-    #   group: gromacs
 
-  
   config-slave-1:
     groups:
-    - name: gromacs
+    - name: gromacs/slave
     actions:
     - type: command
       command: touch slave.txt
-    # - type: action
-    #   name: configure-hosts
-    #   group: gromacs
-    # - type: action
-    #   name: simulation-setup
-    #   group: gromacs
 
-      
+
+  prepara-tudo:
+    actions:
+    - type: action
+      name: configure-hosts
+      group: gromacs
+    - type: action
+      name: simulation-setup
+      group: gromacs
+
+
 clusters:
   cluster-t2-micro-2x:
     nodes:
@@ -50,3 +40,6 @@ clusters:
         min_count: 1
         setups: 
         - config-master-1
+
+    after:
+    - prepara-tudo

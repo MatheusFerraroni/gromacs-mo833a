@@ -22,3 +22,8 @@ actions:
   configure-hosts:
     playbook: roles/gromacs_hosts.yml
     description: Configura os hosts
+
+
+hosts:
+- master
+- slave
