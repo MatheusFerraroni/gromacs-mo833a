@@ -1,0 +1,34 @@
+--------------------------------------------------------------------------
+[[52561,1],1]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: ip-172-31-57-201
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Init time, 0.109161
+Init time, 0.109646
+Iteration: 1, 0.067067, 0.176228
+Iteration: 1, 0.066558, 0.176204
+Iteration: 2, 0.062364, 0.238819
+Iteration: 2, 0.062472, 0.238747
+Iteration: 3, 0.061469, 0.300590
+Iteration: 3, 0.061699, 0.300511
+Iteration: 4, 0.061622, 0.362516
+Iteration: 4, 0.061846, 0.362422
+Iteration: 5, 0.061836, 0.424526
+Iteration: 5, 0.062041, 0.424515
+Iteration: 6, 0.061600, 0.486358
+Iteration: 6, 0.061700, 0.486280
+Iteration: 7, 0.061414, 0.547993
+Iteration: 7, 0.061580, 0.547924
+Iteration: 8, 0.061427, 0.609669
+Iteration: 8, 0.061595, 0.609585
+Iteration: 9, 0.061697, 0.671635
+Iteration: 9, 0.061871, 0.671525
+Iteration: 10, 0.061500, 0.733420
+Iteration: 10, 0.061932, 0.733521
+[MO833] TOTAL_MAIN_TIME: 0.800275
+[MO833] TOTAL_MAIN_TIME: 0.800375
