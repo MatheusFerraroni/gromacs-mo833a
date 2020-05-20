@@ -19,11 +19,8 @@ actions:
     playbook: roles/gromacs_run.yml
     description: Run gromacs
 
+
   configure-hosts:
     playbook: roles/gromacs_hosts.yml
     description: Configura os hosts
 
-
-hosts:
-- master
-- slave

@@ -1,5 +1,5 @@
 ---
-- hosts: master
+- hosts: all
   gather_facts: no
   tasks:
   - name: PEGANDO RESULTADOS .out

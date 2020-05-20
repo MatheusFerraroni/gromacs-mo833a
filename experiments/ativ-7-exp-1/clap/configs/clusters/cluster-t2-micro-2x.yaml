@@ -1,7 +1,7 @@
 setups:
   config-master-1:
     groups:
-    - name: gromacs/master
+    - name: gromacs
     actions:
     - type: command
       command: touch master.txt
@@ -9,7 +9,7 @@ setups:
 
   config-slave-1:
     groups:
-    - name: gromacs/slave
+    - name: gromacs
     actions:
     - type: command
       command: touch slave.txt

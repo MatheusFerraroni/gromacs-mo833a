@@ -32,6 +32,14 @@ Foi criado o arquivo ```~/.clap/groups/action.d/gromacs.yml``` contendo as segui
 
 Quando uma máquina é adicionada ao host é executada a action setup automaticamente.
 
+### Configurar pasta temporária e pasta para obtenção dos resultados
+
+O arquivo ```./clap/groups/roles/gromacs_hosts.yml``` utiliza uma pasta temporária para salvar as chaves de acesso. Para definir esta pasta alterar as linhas 11 e 19 para uma pasta local que já esteja criada.
+
+O arquivo ```./clap/groups/roles/gromacs_fetch.yml``` define nas linhas 9 e 16 o diretório para download dos resultados gerados no cluster
+
+
+
 
 ## Cluster
 
@@ -90,15 +98,28 @@ clusters:
 
 
 
+
+
+
 ## Execução Manual
+
+
+
+**Importante:** Lembrar de configurar as pastas que serão utilizadas pelo group
 
 
 1. Executar ```clapp cluster start cluster-t2-micro-2x``` (O nome do cluster pode ser 2x, 4x ou 8x)
 2. Executar ```clapp cluster list``` para definir o id do cluster e o id do host definido como master
 4. Executar ```clapp cluster action cluster-XX gromacs run --nodes node-YY``` para executar o gromacs
 5. Executar ```clapp cluster action cluster-XX gromacs fetch-result --nodes node-YY``` para obter os resultados
+6. Executar ```clapp cluster stop cluster-XX``` para finalizar o cluster que foi criado
+
+
 
 ## Execução com script
+
+**Importante:** Lembrar de configurar as pastas que serão utilizadas pelo group
+
 
 Os arquivos executer_2x.sh, executer_4x.sh e executer_8x.sh foram preparados para executar todo o processo automaticamente.
 
